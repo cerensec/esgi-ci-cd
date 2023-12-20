@@ -7,4 +7,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls -l
-      - run: cat README.md | cowsays dans GitPod
+      - uses: mscoutermarsh/cowsays-action@master
+      - run: cat README.md | cowsays
