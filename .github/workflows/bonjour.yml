@@ -7,5 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls -l
-      - uses: mscoutermarsh/cowsays-action@master
+      - run: |
+          sudo apt-get update
+          sudo apt-get install --yes cowsay
       - run: cat README.md | cowsays
