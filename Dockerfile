@@ -1,5 +1,2 @@
-FROM node:19
-WORKDIR /app
-COPY ./app/package.json /app
-COPY ./app/package-lock.json /app
-RUN npm install
+FROM ubuntu:22.04
+RUN apt-get update && apt-get install -y cowsay 
