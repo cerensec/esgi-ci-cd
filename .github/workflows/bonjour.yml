@@ -9,4 +9,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: docker build -t $IMAGE_NAME ./
-      - run: docker container run --rm $IMAGE_NAME --volume="$(pwd)":"$(pwd)" --workdir="$(pwd)" cowsay:latest bash -c "cat ./README.md | cowsay"
+      - run: docker container run --rm $IMAGE_NAME --volume="$(pwd)":"$(pwd)" --workdir="$(pwd)" npm run lint
